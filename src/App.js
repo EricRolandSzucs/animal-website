@@ -8,6 +8,7 @@ import NotFound from './NotFound';
 import Footer from './Footer';
 import LoginPage from './LoginPage.js';
 import RegisterPage from './RegisterPage.js';
+import Schedule from './Schedule.js';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route path="/register">
               <RegisterPage/>
+            </Route>
+            <Route path="/schedule">
+              <Schedule/>
             </Route>
             <Route path="*">
               <NotFound />
