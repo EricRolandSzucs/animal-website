@@ -9,7 +9,7 @@ const NavbarLower = () => {
       {
        
       <div className="links">
-        <Link to="/" style={{ 
+        <Link to="/schedule" style={{ 
           margin: '20px'
         }}> SCHEDULE VISIT</Link>
       
