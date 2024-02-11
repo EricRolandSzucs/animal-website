@@ -54,18 +54,19 @@ const BlogDetails = () => {
         />
       </div>
       <div className="mini-images">
-        {[1, 2, 3].map((offset) => {
-          const sideImageIndex = (startIndex + offset) % blog.images.length;
-          return (
-            <img
-              key={sideImageIndex}
-              src={`/images/user/${blog.images[sideImageIndex].image}`}
-              alt={`Side ${offset + 1}`}
-              onClick={() => handleSideImageClick(sideImageIndex)}
-            />
-          );
-        })}
-      </div>
+      {blog.images.length > 1 && [1, 2, 3].slice(0, Math.min(blog.images.length - 1, 3)).map((offset) => {
+        const sideImageIndex = (startIndex + offset) % blog.images.length;
+        return (
+          <img
+            key={sideImageIndex}
+            src={`/images/user/${blog.images[sideImageIndex].image}`}
+            alt={`Side ${offset + 1}`}
+            onClick={() => handleSideImageClick(sideImageIndex)}
+          />
+        );
+      })}
+    </div>
+
       <div className="arrow-container">
         <button className="arrow prev" onClick={handlePrevClick}>
           &lt;
