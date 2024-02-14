@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import AuthContext from "./context/AuthProvider";
 
 const Schedule = () => {
-  const [date, setDate] = useState('');
-  const [input1, setInput1] = useState('');
-  const [input2, setInput2] = useState('');
 
-  const shelterName = "Miami Shelter"
+  const { auth } = useContext(AuthContext);
+
+  const [date, setDate] = useState('');
+  const [email, setEmail] = useState(auth ? auth.email : '');
+  const [phone, setPhone] = useState(auth ? auth.phone : '');
+  const [shelter, setShelter] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Date:', date);
-    console.log('Input 1:', input1);
-    console.log('Input 2:', input2);
   };
 
   return (
     <div className="form-container">
-      <h1>Schedule a visit at:<br></br> { shelterName }</h1>
+      <h1>Schedule visit at:<br></br></h1>
       <form onSubmit={handleSubmit}>
+
+        <label htmlFor="shelter">Shelter:</label>
+        <select value={shelter} onChange={(e) => setShelter(e.target.value)}>
+          <option value="1">South Wilmington Street Center</option>
+        </select>
+
+
         <label htmlFor="date">Date:</label>
         <input
           type="date"
@@ -26,20 +33,20 @@ const Schedule = () => {
           onChange={(e) => setDate(e.target.value)}
         />
 
-        <label htmlFor="input1">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="text"
-          id="input1"
-          value={input1}
-          onChange={(e) => setInput1(e.target.value)}
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
-        <label htmlFor="input2">Phone number:</label>
+        <label htmlFor="phone">Phone number:</label>
         <input
           type="phone"
-          id="input2"
-          value={input2}
-          onChange={(e) => setInput2(e.target.value)}
+          id="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
         />
 
         <button type="submit">Submit</button>
