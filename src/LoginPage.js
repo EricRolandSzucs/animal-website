@@ -2,8 +2,6 @@ import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "./context/AuthProvider";
 import { Link } from 'react-router-dom';
 
-// const LOGIN_URL = '/auth';
-
 const LoginPage = () => {
     const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
@@ -38,8 +36,10 @@ const LoginPage = () => {
         
                 const accessToken = responseData.accessToken;
                 const roles = responseData.roles;
+                const email = responseData.email;
+                const phone = responseData.phone;
         
-                setAuth({ user, pwd, roles, accessToken });
+                setAuth({ user, pwd, email, phone, roles, accessToken });
                 setUser('');
                 setPwd('');
                 setSuccess(true);
