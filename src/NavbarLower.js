@@ -5,7 +5,7 @@ import AuthContext from "./context/AuthProvider";
 const NavbarLower = () => {
   const {auth} = useContext(AuthContext);
   return (
-    <nav className="navbar-lower">
+    <nav className="navbar-lower navbar">
       {
        
       <div className="links">
