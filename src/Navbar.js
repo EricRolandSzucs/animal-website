@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const getImageSrc = () => {
     if (isHovered) {
-      return "/images/website-logo-circle-3-eyes.png";
+      return "/images/website-logo-circle-3.png";
     } else {
       return "/images/website-logo-circle-3.png";
     }
@@ -45,7 +45,7 @@ const Navbar = () => {
 }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-upper">
       <Link to="/"><h1>Meowsers Cat Shelter</h1></Link>
       
       <img alt="logo" className="logo" src={getImageSrc()}

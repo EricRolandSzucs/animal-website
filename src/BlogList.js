@@ -7,7 +7,7 @@ const BlogList = ({ blogs }) => {
         <div className="blog-preview" key={blog.id} >
           <Link to={`/blogs/${blog.id}`}>
             <div className="blog-preview-image">
-              <img className="rounded-image" src={'/images/user/' + blog.url} alt={blog.name} />
+              <img src={'/images/user/' + blog.url} alt={blog.name} />
             </div>
             <h2>{ blog.name }</h2>
             <p>{ blog.breed }</p>

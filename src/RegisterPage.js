@@ -96,7 +96,7 @@ const RegisterPage = () => {
                     </p>
                 </section>
             ) : (
-                <section className="register-container">
+                <section className="centered form-container">
                     <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
                         {errMsg}
                     </p>
