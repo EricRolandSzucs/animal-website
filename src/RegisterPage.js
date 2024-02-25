@@ -89,7 +89,7 @@ const RegisterPage = () => {
     return (
         <>
             {success ? (
-                <section>
+                <section className="centered">
                     <h1>Success!</h1>
                     <p>
                         <a href="/login">Sign In</a>

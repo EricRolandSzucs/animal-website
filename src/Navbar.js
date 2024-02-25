@@ -51,7 +51,7 @@ const Navbar = () => {
       <img alt="logo" className="logo" src={getImageSrc()}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut} />
-      <img alt="account" src="/images/my_account.png" />
+      <img style={{width: '60px'}}alt="account" src="/images/my_account_2.png" />
       <div className="links">
         {auth ? (
 

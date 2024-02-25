@@ -65,7 +65,7 @@ const LoginPage = () => {
   return (
     <>
       {success ? (
-        <section id="loggedin-container" className="form-container">
+        <section id="loggedin-container" className="centered form-container">
           <h1>You are logged in!</h1>
           <br />
           <p>

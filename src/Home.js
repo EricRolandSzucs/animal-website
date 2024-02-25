@@ -3,6 +3,7 @@ import useFetch from "./useFetch";
 import Search from "./Search"; // Import the Search component
 import { useState, useEffect } from "react";
 
+
 const Home = () => {
   const { error, isPending, data: allBlogs } = useFetch('http://localhost:8800/announcements');
   const [filteredBlogs, setFilteredBlogs] = useState([]);
