@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import AuthContext from "./context/AuthProvider";
 
-const Schedule = () => {
+const Schedule = ({ style }) => {
 
   const { auth } = useContext(AuthContext);
 
@@ -15,7 +15,7 @@ const Schedule = () => {
   };
 
   return (
-    <div className="form-container">
+    <div style={style} className="schedule centered form-container">
       <h1>Schedule visit at:<br></br></h1>
       <form onSubmit={handleSubmit}>
 

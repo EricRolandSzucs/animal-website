@@ -51,8 +51,8 @@ const Create = () => {
   };
 
   return (
-    <div className="create">
-      <h2>Add a New Announcement</h2>
+    <div className="create form-container">
+      <h1>Add a New Announcement</h1>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input

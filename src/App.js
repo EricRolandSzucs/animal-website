@@ -34,7 +34,7 @@ function App() {
               <RegisterPage/>
             </Route>
             <Route path="/schedule">
-              <div style={{marginLeft: '34%', marginTop: '5%'}}><Schedule/></div>
+              <Schedule/>
             </Route>
             <Route path="*">
               <NotFound />
